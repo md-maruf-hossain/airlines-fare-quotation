@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 import { getSavedQuotes, saveQuote, deleteQuote } from "./utils/storage";
 
+
 export default function App() {
   const [quote, setQuote] = useState(null);
   const [editingQuote, setEditingQuote] = useState(null);
