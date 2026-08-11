@@ -4,7 +4,7 @@ import { quote as sampleQuote } from "../../data/sampleQuote";
 import { COLORS, fontImport } from "./theme";
 import FlightSegment from "./FlightSegment";
 import QuotationActions from "./QuotationActions";
-import { computeTransitTime } from "../../utils/dateUtils";
+import { computeConnectionGap } from "../../utils/dateUtils";
 
 export default function QuotationPreview({ quote = sampleQuote, onEdit }) {
   const cardRef = useRef(null);
@@ -57,17 +57,16 @@ export default function QuotationPreview({ quote = sampleQuote, onEdit }) {
           </div>
 
           {quote.segments.map((seg, i) => {
-            const transit = i < quote.segments.length - 1 ? computeTransitTime(seg, quote.segments[i + 1]) : null;
+            const gap = i < quote.segments.length - 1 ? computeConnectionGap(seg, quote.segments[i + 1]) : null;
             return (
               <div key={i}>
                 <FlightSegment seg={seg} isLast={i === quote.segments.length - 1} />
-                {transit && (
+                {gap && gap.type === "transit" && (
                   <div
-                    className="flex items-center gap-2 mb-4"
-                    style={{ marginLeft: 42, marginTop: -16, fontSize: 12, color: COLORS.gold }}
+                    style={{ display: "flex", alignItems: "center", marginLeft: 42, marginTop: -16, marginBottom: 16, fontSize: 12, color: COLORS.gold }}
                   >
-                    <Clock size={12} />
-                    Transit time: {transit} in {seg.toCity} ({seg.to})
+                    <Clock size={12} style={{ marginRight: 8, flexShrink: 0 }} />
+                    <span>Transit time: {gap.formatted} in {seg.toCity} ({seg.to})</span>
                   </div>
                 )}
               </div>
