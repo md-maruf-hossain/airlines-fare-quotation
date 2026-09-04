@@ -7065,20 +7065,9 @@ const AIRLINES = {
   "9W": "Jet Airways",
   "9X": "Regionalia Venezuela",
   "9Y": "Air Kazakhstan",
-  DAC: "Dhaka", DOH: "Doha", DXB: "Dubai", LHR: "London", LAX: "Los Angeles",
-  SFO: "San Francisco", ORD: "Chicago", JFK: "New York", CDG: "Paris",
-  IST: "Istanbul", SIN: "Singapore", BKK: "Bangkok", KUL: "Kuala Lumpur",
-  DEL: "Delhi", BOM: "Mumbai", CCU: "Kolkata", AUH: "Abu Dhabi",
-  SYD: "Sydney", DPS: "Denpasar (Bali)", MEL: "Melbourne", HKG: "Hong Kong",
-  NRT: "Tokyo", ICN: "Seoul", MNL: "Manila", CGK: "Jakarta",
 };
 
-const AIRLINES = {
-  QR: "Qatar Airways", AA: "American Airlines", EK: "Emirates", BG: "Biman Bangladesh Airlines",
-  BS: "US-Bangla Airlines", TK: "Turkish Airlines", SQ: "Singapore Airlines", EY: "Etihad Airways",
-  UA: "United Airlines", BA: "British Airways", AI: "Air India", CX: "Cathay Pacific",
-  MH: "Malaysia Airlines", TG: "Thai Airways", CI: "China Airlines", MU: "China Eastern",
-};
+
 
 const CABINS = { F: "First class", J: "Business class", C: "Business class", W: "Economy class" };
 
