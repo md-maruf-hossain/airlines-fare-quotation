@@ -1,4 +1,4 @@
-import { computeTransitTime } from "./dateUtils";
+import { computeConnectionGap } from "./dateUtils";
 
 // Builds the plain-text message used for both the "Share on WhatsApp" and
 // "Copy as text" buttons, so both stay in sync automatically.
@@ -17,9 +17,13 @@ export function buildWhatsAppText(q) {
     lines.push("");
 
     if (i < q.segments.length - 1) {
-      const transit = computeTransitTime(seg, q.segments[i + 1]);
-      if (transit) {
-        lines.push(`Transit time: ${transit} in ${seg.toCity} (${seg.to})`);
+      const gap = computeConnectionGap(seg, q.segments[i + 1]);
+      if (gap) {
+        lines.push(
+          gap.type === "transit"
+            ? `Transit time: ${gap.formatted} in ${seg.toCity} (${seg.to})`
+            : `Stay in ${seg.toCity} (${seg.to}): ${gap.formatted}`
+        );
         lines.push("");
       }
     }

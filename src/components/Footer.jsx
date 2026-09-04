@@ -2,9 +2,10 @@ import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from "lucide-reac
 import { COLORS } from "./quotation/theme";
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com/mhs.7660" },
-  { icon: Instagram, href: "https://www.instagram.com/marufuuuuuu/" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/md-maruf-hossainn/" },
+  { icon: Facebook, href: "https://facebook.com" },
+  { icon: Instagram, href: "https://instagram.com" },
+  { icon: Linkedin, href: "https://linkedin.com" },
+  { icon: Twitter, href: "https://twitter.com" },
 ];
 
 export default function Footer() {
@@ -14,13 +15,13 @@ export default function Footer() {
       style={{ background: COLORS.navy, fontFamily: "'Poppins', sans-serif" }}
     >
       <div className="text-center md:text-left" style={{ fontSize: 12, color: "#C7CEDD" }}>
-        <div>&copy; {new Date().getFullYear()} Md Maruf Hossain. All rights reserved.</div>
+        <div>&copy; {new Date().getFullYear()} Wingspan Travels. All rights reserved.</div>
         <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 mt-1">
           <span className="flex items-center gap-1">
-            <Phone size={12} /> +880 1937-358402
+            <Phone size={12} /> +880 1711-223344
           </span>
           <span className="flex items-center gap-1">
-            <Mail size={12} /> mdmarufhossain6470@gmial.com
+            <Mail size={12} /> book@wingspantravels.com
           </span>
         </div>
       </div>
