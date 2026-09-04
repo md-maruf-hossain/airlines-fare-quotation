@@ -7,7 +7,6 @@ const MONTH_NAMES = { JAN: "Jan", FEB: "Feb", MAR: "Mar", APR: "Apr", MAY: "May"
 
 // Extend these as you fly more routes/airlines — unknown codes just fall back to the raw code.
 const AIRPORTS = {
-<<<<<<< HEAD
   GKA: "Goroka",
   MAG: "Madang",
   HGU: "Mount Hagen",
@@ -7066,7 +7065,6 @@ const AIRLINES = {
   "9W": "Jet Airways",
   "9X": "Regionalia Venezuela",
   "9Y": "Air Kazakhstan",
-=======
   DAC: "Dhaka", DOH: "Doha", DXB: "Dubai", LHR: "London", LAX: "Los Angeles",
   SFO: "San Francisco", ORD: "Chicago", JFK: "New York", CDG: "Paris",
   IST: "Istanbul", SIN: "Singapore", BKK: "Bangkok", KUL: "Kuala Lumpur",
@@ -7080,7 +7078,6 @@ const AIRLINES = {
   BS: "US-Bangla Airlines", TK: "Turkish Airlines", SQ: "Singapore Airlines", EY: "Etihad Airways",
   UA: "United Airlines", BA: "British Airways", AI: "Air India", CX: "Cathay Pacific",
   MH: "Malaysia Airlines", TG: "Thai Airways", CI: "China Airlines", MU: "China Eastern",
->>>>>>> bfb1a8456fea1842329ffaee7c2e310eaec63b3b
 };
 
 const CABINS = { F: "First class", J: "Business class", C: "Business class", W: "Economy class" };
@@ -7147,8 +7144,5 @@ export function parseGdsSegments(text) {
   });
 
   return { segments, unmatched };
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> bfb1a8456fea1842329ffaee7c2e310eaec63b3b
+

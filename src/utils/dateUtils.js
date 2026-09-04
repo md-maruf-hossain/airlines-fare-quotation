@@ -35,14 +35,6 @@ function parseDisplayTime(timeStr) {
   return { hh: parseInt(m[1], 10), mm: parseInt(m[2], 10) };
 }
 
-<<<<<<< HEAD
-// Returns a "Xh Ym" string for the gap between one segment's arrival and the
-// next segment's departure, or null if either side can't be parsed.
-export function computeTransitTime(prevSeg, nextSeg) {
-  const arr = parseDisplayDateTime(prevSeg?.date, prevSeg?.arrive);
-  const dep = parseDisplayDateTime(nextSeg?.date, nextSeg?.depart);
-if (prevSeg.to !== nextSeg.from) return null;
-=======
 // Reads "8h 23m", "8h", or "45m" — anything missing is treated as 0.
 function parseDurationMinutes(durationStr) {
   const m = String(durationStr || "").match(/(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?/i);
@@ -67,7 +59,6 @@ export function computeConnectionGap(prevSeg, nextSeg) {
   const nextDepTime = parseDisplayTime(nextSeg?.depart);
 
   if (!prevDate || !prevDepTime || prevDurationMin === null || !nextDate || !nextDepTime) return null;
->>>>>>> bfb1a8456fea1842329ffaee7c2e310eaec63b3b
 
   const baseYear = 2000;
   const prevDepartDateTime = toDate(prevDate, prevDepTime, baseYear);
