@@ -23,7 +23,7 @@ function toDate(parsed, year) {
 export function computeTransitTime(prevSeg, nextSeg) {
   const arr = parseDisplayDateTime(prevSeg?.date, prevSeg?.arrive);
   const dep = parseDisplayDateTime(nextSeg?.date, nextSeg?.depart);
-  if (!arr || !dep) return null;
+if (prevSeg.to !== nextSeg.from) return null;
 
   const baseYear = 2000;
   const arrDate = toDate(arr, baseYear);
